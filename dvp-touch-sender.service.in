@@ -1,0 +1,25 @@
+[Unit]
+Description=DVP wireless touchscreen interface
+After=NetworkManager.service
+Wants=NetworkManager.service
+
+[Service]
+Type=simple
+User=@DVP_USER@
+Group=@DVP_GROUP@
+SupplementaryGroups=input
+WorkingDirectory=@DVP_ROOT@
+RuntimeDirectory=dvp-touch-sender
+RuntimeDirectoryMode=0700
+Environment=DVP_POWEROFF_REQUEST=/run/dvp-touch-sender/poweroff
+ExecStart=/usr/bin/python3 @DVP_ROOT@/touch_sender.py --config @DVP_ROOT@/config.json
+Restart=always
+RestartSec=2
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=read-only
+
+[Install]
+WantedBy=multi-user.target
+

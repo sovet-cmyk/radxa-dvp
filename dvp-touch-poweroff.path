@@ -1,0 +1,10 @@
+[Unit]
+Description=Watch for an authenticated DVP poweroff request
+After=dvp-touch-sender.service
+
+[Path]
+PathExists=/run/dvp-touch-sender/poweroff
+Unit=dvp-touch-poweroff.service
+
+[Install]
+WantedBy=multi-user.target

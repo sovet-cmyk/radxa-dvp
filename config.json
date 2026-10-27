@@ -1,0 +1,21 @@
+{
+  "destination_host": "10.42.0.1",
+  "destination_port": 4210,
+  "local_port": 4211,
+  "shared_key": "dvp3-touch-v1-7F4m9Q2x8K6p",
+  "device": "",
+  "device_name_contains": "",
+  "grab_device": true,
+  "rotation": 0,
+  "invert_x": false,
+  "invert_y": false,
+  "x_min": null,
+  "x_max": null,
+  "y_min": null,
+  "y_max": null,
+  "heartbeat_seconds": 0.25,
+  "hello_seconds": 1.0,
+  "active_refresh_seconds": 0.10,
+  "device_retry_seconds": 2.0
+}
+

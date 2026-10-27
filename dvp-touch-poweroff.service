@@ -1,0 +1,6 @@
+[Unit]
+Description=DVP authenticated interface shutdown
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/systemctl poweroff
